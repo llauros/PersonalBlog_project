@@ -16,7 +16,8 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Classe Modelo para Usuario , a mesma é considerada uma entidade no banco de Dados
+ * Classe Modelo para Usuario , a mesma é considerada uma entidade no banco de
+ * Dados
  * 
  * @since 1.0
  * @author llauro
@@ -39,8 +40,12 @@ public class Usuario {
 	@Size(min = 5, max = 100, message = "Necessario min 5 caracteres")
 	private String senha; // Necessarioamente Size deve ser max 100
 
+	private String foto;
+
+	private String tipo;
+
 	@OneToMany(mappedBy = "criador", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties({"criador"})
+	@JsonIgnoreProperties({ "criador" })
 	private List<Postagem> minhasPostagens = new ArrayList<>();
 
 	public Usuario() {
@@ -85,6 +90,22 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 	public List<Postagem> getMinhasPostagens() {
