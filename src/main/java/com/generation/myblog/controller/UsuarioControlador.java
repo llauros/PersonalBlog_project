@@ -38,12 +38,6 @@ public class UsuarioControlador {
 	private @Autowired UsuarioServicos servicos;
 	
 	
-	
-	@GetMapping
-	public ResponseEntity<String> aff() {
-		return ResponseEntity.ok("AAAAA");
-	}
-	
 	@ApiOperation(value = "Salva novo usuario no sistema")
 	@ApiResponses(value = {
 			@ApiResponse(code = 201, message = "Retorna usuario cadastrado"),
@@ -148,8 +142,5 @@ public class UsuarioControlador {
 		} else {
 			return ResponseEntity.status(400).build();
 		}
-
 	}
-
 }
-
