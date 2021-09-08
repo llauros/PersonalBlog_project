@@ -1,3 +1,7 @@
+/** 
+  Possui todos os modulos da aplicação
+*/
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +12,10 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
+
+/**
+ * Declaração dos componentes
+ */
 @NgModule({
   declarations: [
     AppComponent,
